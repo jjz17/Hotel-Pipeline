@@ -1,5 +1,5 @@
 # Hotel-Pipeline
-An airflow data pipeline for processing hotel booking demand data.
+A data pipeline for processing hotel booking demand data using Apache Airflow and Docker.
 
 ## Usage
 ### Initial Setup
