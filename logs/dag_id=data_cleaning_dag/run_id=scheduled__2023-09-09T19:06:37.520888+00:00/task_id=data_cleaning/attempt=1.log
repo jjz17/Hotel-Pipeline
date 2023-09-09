@@ -1,0 +1,99 @@
+[2023-09-09 19:07:44,497] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: data_cleaning_dag.data_cleaning scheduled__2023-09-09T19:06:37.520888+00:00 [queued]>
+[2023-09-09 19:07:44,502] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: data_cleaning_dag.data_cleaning scheduled__2023-09-09T19:06:37.520888+00:00 [queued]>
+[2023-09-09 19:07:44,502] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 19:07:44,502] {taskinstance.py:1377} INFO - Starting attempt 1 of 1
+[2023-09-09 19:07:44,503] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-09-09 19:07:44,509] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): data_cleaning> on 2023-09-09 19:06:37.520888+00:00
+[2023-09-09 19:07:44,513] {standard_task_runner.py:52} INFO - Started process 263 to run task
+[2023-09-09 19:07:44,516] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_cleaning_dag', 'data_cleaning', 'scheduled__2023-09-09T19:06:37.520888+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/data_cleaning_dag/data_cleaning.py', '--cfg-path', '/tmp/tmps436kqlt', '--error-file', '/tmp/tmpgpos1bb_']
+[2023-09-09 19:07:44,517] {standard_task_runner.py:80} INFO - Job 9: Subtask data_cleaning
+[2023-09-09 19:07:44,558] {task_command.py:371} INFO - Running <TaskInstance: data_cleaning_dag.data_cleaning scheduled__2023-09-09T19:06:37.520888+00:00 [running]> on host 6373db7196fd
+[2023-09-09 19:07:44,596] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_cleaning_dag
+AIRFLOW_CTX_TASK_ID=data_cleaning
+AIRFLOW_CTX_EXECUTION_DATE=2023-09-09T19:06:37.520888+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-09-09T19:06:37.520888+00:00
+[2023-09-09 19:07:44,805] {logging_mixin.py:115} INFO - <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 40060 entries, 0 to 40059
+Data columns (total 31 columns):
+ #   Column                       Non-Null Count  Dtype  
+---  ------                       --------------  -----  
+ 0   IsCanceled                   40060 non-null  int64  
+ 1   LeadTime                     40060 non-null  int64  
+ 2   ArrivalDateYear              40060 non-null  int64  
+ 3   ArrivalDateMonth             40060 non-null  object 
+ 4   ArrivalDateWeekNumber        40060 non-null  int64  
+ 5   ArrivalDateDayOfMonth        40060 non-null  int64  
+ 6   StaysInWeekendNights         40060 non-null  int64  
+ 7   StaysInWeekNights            40060 non-null  int64  
+ 8   Adults                       40060 non-null  int64  
+ 9   Children                     40060 non-null  int64  
+ 10  Babies                       40060 non-null  int64  
+ 11  Meal                         40060 non-null  object 
+ 12  Country                      39596 non-null  object 
+ 13  MarketSegment                40060 non-null  object 
+ 14  DistributionChannel          40060 non-null  object 
+ 15  IsRepeatedGuest              40060 non-null  int64  
+ 16  PreviousCancellations        40060 non-null  int64  
+ 17  PreviousBookingsNotCanceled  40060 non-null  int64  
+ 18  ReservedRoomType             40060 non-null  object 
+ 19  AssignedRoomType             40060 non-null  object 
+ 20  BookingChanges               40060 non-null  int64  
+ 21  DepositType                  40060 non-null  object 
+ 22  Agent                        40060 non-null  object 
+ 23  Company                      40060 non-null  object 
+ 24  DaysInWaitingList            40060 non-null  int64  
+ 25  CustomerType                 40060 non-null  object 
+ 26  ADR                          40060 non-null  float64
+ 27  RequiredCarParkingSpaces     40060 non-null  int64  
+ 28  TotalOfSpecialRequests       40060 non-null  int64  
+ 29  ReservationStatus            40060 non-null  object 
+ 30  ReservationStatusDate        40060 non-null  object 
+dtypes: float64(1), int64(17), object(13)
+memory usage: 9.5+ MB
+[2023-09-09 19:07:44,859] {logging_mixin.py:115} INFO - <class 'pandas.core.frame.DataFrame'>
+RangeIndex: 40060 entries, 0 to 40059
+Data columns (total 31 columns):
+ #   Column                       Non-Null Count  Dtype  
+---  ------                       --------------  -----  
+ 0   IsCanceled                   40060 non-null  int64  
+ 1   LeadTime                     40060 non-null  int64  
+ 2   ArrivalDateYear              40060 non-null  int64  
+ 3   ArrivalDateMonth             40060 non-null  object 
+ 4   ArrivalDateWeekNumber        40060 non-null  int64  
+ 5   ArrivalDateDayOfMonth        40060 non-null  int64  
+ 6   StaysInWeekendNights         40060 non-null  int64  
+ 7   StaysInWeekNights            40060 non-null  int64  
+ 8   Adults                       40060 non-null  int64  
+ 9   Children                     40060 non-null  int64  
+ 10  Babies                       40060 non-null  int64  
+ 11  Meal                         40060 non-null  object 
+ 12  Country                      39596 non-null  object 
+ 13  MarketSegment                40060 non-null  object 
+ 14  DistributionChannel          40060 non-null  object 
+ 15  IsRepeatedGuest              40060 non-null  int64  
+ 16  PreviousCancellations        40060 non-null  int64  
+ 17  PreviousBookingsNotCanceled  40060 non-null  int64  
+ 18  ReservedRoomType             40060 non-null  object 
+ 19  AssignedRoomType             40060 non-null  object 
+ 20  BookingChanges               40060 non-null  int64  
+ 21  DepositType                  40060 non-null  object 
+ 22  Agent                        40060 non-null  object 
+ 23  Company                      40060 non-null  object 
+ 24  DaysInWaitingList            40060 non-null  int64  
+ 25  CustomerType                 40060 non-null  object 
+ 26  ADR                          40060 non-null  float64
+ 27  RequiredCarParkingSpaces     40060 non-null  int64  
+ 28  TotalOfSpecialRequests       40060 non-null  int64  
+ 29  ReservationStatus            40060 non-null  object 
+ 30  ReservationStatusDate        40060 non-null  object 
+dtypes: float64(1), int64(17), object(13)
+memory usage: 9.5+ MB
+[2023-09-09 19:07:45,448] {python.py:173} INFO - Done. Returned value was: None
+[2023-09-09 19:07:45,456] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=data_cleaning_dag, task_id=data_cleaning, execution_date=20230909T190637, start_date=20230909T190744, end_date=20230909T190745
+[2023-09-09 19:07:45,498] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-09-09 19:07:45,526] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
